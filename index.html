@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sulejman Muminović</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const saved = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', saved);
+    </script>
+</head>
+
+<body>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item">
+                    <figure>
+                        <img src="src/logo.png" alt="Logo" class="image">
+                    </figure>
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbar" class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="#" class="navbar-item ">
+                        Home
+                    </a>
+                    <a href="sites/aboutme.html" class="navbar-item">
+                        About me
+                    </a>
+                    <a href="sites/contact.html" class="navbar-item">
+                        Contact
+                    </a>
+                    <button id="theme-toggle" class="button is-ghost">
+                        <span class="icon">
+                            <span class="iconify" data-icon="ph:sun-bold" id="theme-icon"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero is-fullheight-with-navbar container" data-aos="fade-up">
+        <div class="container is-flex is-justify-content-center is-align-items-center">
+            <div
+                class="cell is-vcentered has-text-centered is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+                <!-- Replace with a vector if available -->
+                <img src="src/logo.png" alt="Logo image" class="image is-128x128 mb-4">
+                <h1 class="title is-size-2">Sulejman Muminović</h1>
+                <h2 class="subtitle">Web Developer</h2>
+                <p class="">You need a quick and precise <strong>web developer</strong>? I'm here to help!</p>
+                <div class="buttons is-centered pt-4">
+                    <a href="sites/aboutme.html">
+                        <button class="button is-link is-light">About me</button>
+                    </a>
+                    <a href="sites/contact.html">
+                        <button class="button is-link is-outlined">Contact</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                &copy; 2025 Sulejman Muminović. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+    <script src="index.js"></script>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+</body>
+
+</html>

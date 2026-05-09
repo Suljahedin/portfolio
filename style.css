@@ -1,0 +1,69 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-brand .navbar-burger {
+    margin-left: auto;
+}
+
+.navbar-item.title {
+    margin-bottom: 0;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    line-height: 1;
+}
+
+.navbar.is-fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.navbar.is-fixed-top .container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.zoom-on-hover:hover {
+    transform: scale(1.05);
+}
+
+.zoom-on-hover {
+    transition: transform 0.5s;
+}
+
+body {
+    padding-top: 3.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .icon {
+    transition: opacity 0.15s ease;
+}
+
+@media screen and (max-width: 1023px) {
+    nav.navbar .navbar-menu {
+        display: block !important;
+        max-height: 0 !important;
+        overflow: hidden;
+        transition: max-height 0.5s ease, padding 0.5s ease;
+        padding: 0 !important;
+    }
+
+    nav.navbar .navbar-menu.is-active {
+        max-height: 400px !important;
+        padding: 0.5rem 0 !important;
+    }
+}

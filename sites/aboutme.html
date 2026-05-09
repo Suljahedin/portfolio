@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Sulejman Muminović</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script>
+        const saved = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', saved);
+    </script>
+    <style>
+        .section-label {
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.45;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .section-divider {
+            border: none;
+            border-top: 1px solid var(--bulma-border);
+            margin: 3rem 0;
+        }
+
+        .profile-photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--bulma-border);
+        }
+
+        .skill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--bulma-border);
+            font-size: 0.82rem;
+            margin: 4px;
+        }
+
+        .project-card {
+            border: 1px solid var(--bulma-border);
+            border-radius: 12px;
+            padding: 1.4rem;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .project-card:hover {
+            border-color: var(--bulma-link);
+            transform: translateY(-2px);
+            color: inherit;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.88rem;
+            text-decoration: none;
+            color: inherit;
+            opacity: 0.6;
+            transition: opacity 0.2s ease;
+        }
+
+        .social-link:hover {
+            opacity: 1;
+            color: inherit;
+        }
+
+        .about-hero {
+            padding-top: 4rem;
+            padding-bottom: 2rem;
+        }
+
+        .about-name {
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 1.15;
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-name {
+                font-size: 1.8rem;
+            }
+
+            .about-hero-inner {
+                flex-direction: column-reverse !important;
+                align-items: flex-start !important;
+                gap: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="../index.html" class="navbar-item">
+                    <figure>
+                        <img src="../src/logo.png" alt="Logo" class="image">
+                    </figure>
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="../index.html" class="navbar-item">Home</a>
+                    <a href="aboutme.html" class="navbar-item">About me</a>
+                    <a href="contact.html" class="navbar-item">Contact</a>
+                    <button id="theme-toggle" class="button is-ghost">
+                        <span class="icon">
+                            <span class="iconify" data-icon="ph:sun-bold" id="theme-icon"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ── Hero / Intro ── -->
+    <section class="section about-hero">
+        <div class="container" style="max-width: 780px;">
+
+            <div class="is-flex is-justify-content-space-between is-align-items-center about-hero-inner"
+                style="gap: 2rem;" data-aos="fade-up">
+                <div>
+                    <p class="about-name mb-2">Sulejman Muminović</p>
+                    <p class="is-size-6 mb-4" style="opacity: 0.55;">Web Developer · Bosnia & Herzegovina</p>
+
+                    <!-- SOCIAL LINKS — add/remove as needed -->
+                    <div style="display: flex; gap: 1.25rem; flex-wrap: wrap;">
+                        <a href="https://github.com/Suljahedin" target="_blank" class="social-link">
+                            <span class="iconify" data-icon="ph:github-logo-bold"></span> GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
+                            <span class="iconify" data-icon="ph:linkedin-logo-bold"></span> LinkedIn
+                        </a>
+                        <a href="mailto:your@email.com" class="social-link">
+                            <span class="iconify" data-icon="ph:envelope-bold"></span> Email
+                        </a>
+                    </div>
+                </div>
+
+                <!-- YOUR PHOTO — replace src with your actual photo path -->
+                <img src="../src/logo.png" alt="Sulejman Muminović" class="profile-photo">
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- ── Bio ── -->
+            <div data-aos="fade-up">
+                <p class="section-label">About</p>
+                <!-- WRITE YOUR BIO HERE — 2-4 sentences, first person, keep it human -->
+                <p class="is-size-6" style="line-height: 1.9; opacity: 0.85;">
+                    I'm a web developer from Bosnia & Herzegovina with a passion for building
+                    clean, fast, and user-friendly websites. I enjoy turning ideas into real
+                    products — from the first line of HTML to a polished final result.
+                    When I'm not coding, I'm usually exploring new technologies or working on personal projects.
+                </p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- ── Skills ── -->
+            <div data-aos="fade-up">
+                <p class="section-label">Skills</p>
+
+                <!-- Copy a .skill-tag span for each skill -->
+                <!-- Browse icons at: https://icon-sets.iconify.design/ -->
+                <div style="margin: -4px;">
+                    <span class="skill-tag">
+                        <span class="iconify" data-icon="ph:code-bold"></span> HTML & CSS
+                    </span>
+                    <span class="skill-tag">
+                        <span class="iconify" data-icon="ph:lightning-bold"></span> JavaScript
+                    </span>
+                    <span class="skill-tag">
+                        <span class="iconify" data-icon="teenyicons:nextjs-outline"></span> Next.js
+                    </span>
+                    <span class="skill-tag">
+                        <span class="iconify" data-icon="ph:git-branch-bold"></span> Git
+                    </span>
+                    <!-- Add more skill tags here -->
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- ── Projects ── -->
+            <div data-aos="fade-up">
+                <p class="section-label">Projects</p>
+                <div class="columns is-multiline">
+
+                    <!-- PROJECT 1 -->
+                    <div class="column is-half-tablet">
+                        <!-- Replace href with link for now keep git -->
+                        <a href="https://github.com/Suljahedin/sulje-blog" target="_blank" class="project-card">
+                            <p class="has-text-weight-medium mb-1">Personal Blog</p>
+                            <p class="is-size-7 mb-3" style="opacity: 0.55; line-height: 1.7;">
+                                A clean and minimalist personal blog where I share my thoughts on web development,
+                                technology, and occasional life updates.
+                            </p>
+                            <p class="is-size-7" style="opacity: 0.35;">Next.js · Sanity</p>
+                        </a>
+                    </div>
+
+                    <!-- PROJECT 2 -->
+                    <div class="column is-half-tablet">
+                        <a href="https://your-project-link.com" target="_blank" class="project-card">
+                            <p class="has-text-weight-medium mb-1">Project Name</p>
+                            <p class="is-size-7 mb-3" style="opacity: 0.55; line-height: 1.7;">
+                                Short description of what this project does and the problem it solves.
+                            </p>
+                            <p class="is-size-7" style="opacity: 0.35;">Bulma · JavaScript</p>
+                        </a>
+                    </div>
+
+                    <!-- PROJECT 3 -->
+                    <div class="column is-half-tablet">
+                        <a href="https://your-project-link.com" target="_blank" class="project-card">
+                            <p class="has-text-weight-medium mb-1">Project Name</p>
+                            <p class="is-size-7 mb-3" style="opacity: 0.55; line-height: 1.7;">
+                                Short description of what this project does and the problem it solves.
+                            </p>
+                            <p class="is-size-7" style="opacity: 0.35;">HTML · CSS</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- ── Outside of work ── -->
+            <div data-aos="fade-up">
+                <p class="section-label">Outside of work</p>
+                <p class="is-size-6" style="line-height: 1.9; opacity: 0.85;">
+                    Gaming, listening to music, and occasionally getting too deep into rabbit holes about things
+                    I know nothing about yet.
+                </p>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- ── CTA ── -->
+            <div class="has-text-centered pb-6" data-aos="fade-up">
+                <p class="is-size-7 mb-3" style="opacity: 0.4;">Want to work together?</p>
+                <a href="contact.html" class="button is-link is-light">Get in touch</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>&copy; 2025 Sulejman Muminović. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+    <script src="../index.js"></script>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+
+</body>
+
+</html>
